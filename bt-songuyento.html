@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HI</title>
+</head>
+<body>
+<p align="center" id="out"></p>
+<script>
+    let number = Number(prompt('Nhập số nguyên tố cần in ra?',));
+    let count = 0;
+    let i = 0;
+    let writer ="";
+    for (count = 0; count < number; ){
+        if (isNguyenTo(i)){
+            document.write(i + ': là số nguyên tố' + '<br>');
+            count++;
+        }
+        i++;
+    }
+    function isNguyenTo(a) {
+        if (a<2){return false;}
+        if (a===2){return true;}
+        for (let i = 2; i < a; i++){
+            if ((a % i) === 0){return false;}
+        }
+        return true;
+    }
+</script>
+</body>
+</html>
